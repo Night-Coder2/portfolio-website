@@ -84,89 +84,51 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      {/* Overlay */}
-      <div
-        className={nav ? 'md:hidden fixed left-0 top-0 w-full h-screen bg-black/70' : ''}>
-        {/* Side Drawer Menu */}
-        <div
-          className={
-            nav
-              ? ' fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-gray-900 p-10 ease-in duration-500'
-              : 'fixed left-[-100%] top-0 p-10 ease-in duration-500'
-          }
-        >
-          <div>
-            <div className='flex w-full items-center justify-between'>
-              <Link href='/'>
-                  <Image src={NavLogo} width='87' height='35' alt='/' />
-              </Link>
-              <div
-                onClick={handleNav}
-                className='rounded-full shadow-lg shadow-gray-950 p-3 cursor-pointer'
-              >
-                <AiOutlineClose />
-              </div>
+            <div className={!nav ? 'md:hidden fixed left-0 top-0 w-full h-screen' : ''}>
+                <div className={nav ? 'fixed top-0 left-0 w-[75%] sm:w-[60%] h-screen bg-gray-700 p-10 ease-in duration-500' : 'fixed top-0 left-[-200%] p-10 ease-in duration-500'}>
+                    <div>
+                        <div className='flex w-full items-center justify-between'>
+                            <Image src='/../public/assets/SMBHG.png' width={100} height={35} alt={'/'} />
+                            <div onClick={handleNav} className='rounded-full shadow-lg shadow-gray-950 p-3 ease-in cursor-pointer'>
+                                <AiOutlineClose />
+                            </div>
+                        </div>
+                    </div>
+                    <div className='border-b border-gray-700'>
+                        <p className='w-[85%] md:w-[90%] py-4 text-center'>Lets build something legedary together</p>
+                    </div>
+                    <div className='py-4 flex flex-col'>
+                        <ul>
+                            <Link href='/#home'>
+                               <li className='py-4 text-sm'>Home</li>
+                            </Link>
+                            <Link href='/#about'>
+                               <li className='py-4 text-sm'>About</li>
+                            </Link>
+                            <Link href='/#skills'>
+                               <li className='py-4 text-sm'>Skills</li>
+                            </Link>
+                            <Link href='/'>
+                               <li className='py-4 text-sm'>Projects</li>
+                            </Link>
+                            <Link href='/'>
+                               <li className='py-4 text-sm'>Contact</li>
+                            </Link>
+                        </ul>
+                        <div className='pt-10'>
+                            <p className='uppercase tracking-widest font-bold text-center text-white'>let's connect</p>
+                            <div className='flex items-center justify-between my-4 w-full sm:w-[80%]'>
+                                <div className='rounded-full shadow-lg shadow-gray-950 p-3 ease-in cursor-pointer hover:scale-105 duration-300'>
+                                    <FaGithub />
+                                </div>
+                                <div className='rounded-full shadow-lg shadow-gray-950 p-3 ease-in cursor-pointer hover:scale-105 duration-300'>
+                                    <FaDiscord />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div className='border-b border-gray-300 my-4'>
-              <p className='w-[85%] md:w-[90%] py-4'>
-                Let&#39;s build something legendary together
-              </p>
-            </div>
-          </div>
-          <div className='py-4 flex flex-col'>
-            <ul className='uppercase'>
-              <Link href='/'>
-                <li onClick={() => setNav(false)} className='py-4 text-sm'>
-                  Home
-                </li>
-              </Link>
-              <Link href='/#about'>
-                <li onClick={() => setNav(false)} className='py-4 text-sm'>
-                  About
-                </li>
-              </Link>
-              <Link href='/#skills'>
-                <li onClick={() => setNav(false)} className='py-4 text-sm'>
-                  Skills
-                </li>
-              </Link>
-              <Link href='/#projects'>
-                <li onClick={() => setNav(false)} className='py-4 text-sm'>
-                  Projects
-                </li>
-              </Link>
-            </ul>
-            <div className='pt-10'>
-              <p className='uppercase tracking-widest text-white'>
-                Let&#39;s Connect
-              </p>
-              <div className='flex items-center justify-between my-4 w-full sm:w-[80%]'>
-                <Link
-                  href='https://github.com/phoenixlegen'
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  <div className='rounded-full shadow-lg shadow-gray-950 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-                    <FaGithub />
-                  </div>
-                </Link>
-                <Link
-                  href='https://discord.gg/uquRPXkcnU'
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  <div className='rounded-full shadow-lg shadow-gray-950 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-                    <FaDiscord />
-                  </div>
-                </Link>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
-  );
-};
-
-export default Navbar;
+    )
+  }
