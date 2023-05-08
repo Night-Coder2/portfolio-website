@@ -9,7 +9,7 @@ export default function About() {
             <div className='col-span-2'>
                 <p className='uppercase text-xl tracking-widest'>About</p>
                 <h2 className='py-4'>Who I Am</h2>
-                <p className='py-2 text-gray-600'>//I am not your normal developer</p>
+                <p className='py-2 text-gray-600'>{'//I am not your normal developer'}</p>
                 <p className='py-2'>
                     I am high school student. I had started coding from a young age compared to others. <br />
                     In my spare time I started coding Arduino microcontroller then i was introduced to <br />

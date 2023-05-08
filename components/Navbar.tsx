@@ -84,7 +84,7 @@ export default function Navbar() {
                             </Link>
                         </ul>
                         <div className='pt-10'>
-                            <p className='uppercase tracking-widest font-bold text-center text-white'>let's connect</p>
+                            <p className='uppercase tracking-widest font-bold text-center text-white'>let&apos;s connect</p>
                             <div className='flex items-center justify-between my-4 w-full sm:w-[80%]'>
                                 <div className='rounded-full shadow-lg shadow-gray-950 p-3 ease-in cursor-pointer hover:scale-105 duration-300'>
                                     <FaGithub />

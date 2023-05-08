@@ -11,7 +11,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Head>
-        <title>Sudhir's Portfolio</title>
+        <title>Sudhir&apos;s Portfolio</title>
       </Head>
       <body>
         <Navbar />
