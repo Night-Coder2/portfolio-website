@@ -88,7 +88,7 @@ const Navbar = () => {
                 <div className={nav ? 'fixed top-0 left-0 w-[75%] sm:w-[60%] h-screen bg-gray-700 p-10 ease-in duration-500' : 'fixed top-0 left-[-200%] p-10 ease-in duration-500'}>
                     <div>
                         <div className='flex w-full items-center justify-between'>
-                            <Image src='/../public/assets/SMBHG.png' width={100} height={35} alt={'/'} />
+                            <Image src={NavLogo} width={100} height={35} alt={'/'} />
                             <div onClick={handleNav} className='rounded-full shadow-lg shadow-gray-950 p-3 ease-in cursor-pointer'>
                                 <AiOutlineClose />
                             </div>
@@ -116,7 +116,7 @@ const Navbar = () => {
                             </Link>
                         </ul>
                         <div className='pt-10'>
-                            <p className='uppercase tracking-widest font-bold text-center text-white'>let's connect</p>
+                            <p className='uppercase tracking-widest font-bold text-center text-white'>{`let's connect`}</p>
                             <div className='flex items-center justify-between my-4 w-full sm:w-[80%]'>
                                 <div className='rounded-full shadow-lg shadow-gray-950 p-3 ease-in cursor-pointer hover:scale-105 duration-300'>
                                     <FaGithub />
@@ -131,4 +131,6 @@ const Navbar = () => {
             </div>
         </div>
     )
-  }
+}
+
+export default Navbar
