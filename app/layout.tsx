@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import '@/styles/globals.css'
+import Head from 'next/head'
 import Navbar from '@/components/Navbar'
 
 export default function RootLayout({
@@ -9,6 +10,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <Head>
+        <title>Sudhir's Portfolio</title>
+      </Head>
       <body>
         <Navbar />
         {children}

@@ -2,30 +2,41 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
+import React, {useEffect} from 'react'
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai'
 import { FaGithub, FaDiscord } from 'react-icons/fa'
 
 export default function Navbar() {
     const [nav, setNav] = React.useState(false)
+    const [shadow, setShadow] = React.useState(false)
+
+    useEffect(() => {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                setShadow(true)
+            } else {
+                setShadow(false)
+            }
+        })
+    }, [])
 
     const handleNav = () => {
         setNav(!nav)
     }
 
     return (
-        <div className='fixed w-full h-20 shadow-xl z-[100] bg-gray-800'>
-            <div className='flex items-center justify-between h-full w-full px-2 2xl:px-16'>
+        <div className={shadow ? 'fixed w-full h-20 shadow-xl z-[100] bg-gray-900' : 'fixed w-full h-20 z-[100] bg-gray-900'}>
+            <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
                 <Image src='/../public/assets/SMBHG.png' width={125} height={50} alt={'/'} />
                 <div>
                     <ul className='hidden md:flex'>
-                        <Link href='/'>
+                        <Link href='/#home'>
                             <li className='ml-10 text-sm uppercase hover:border-b'>Home</li>
                         </Link>
-                        <Link href='/'>
+                        <Link href='/#about'>
                             <li className='ml-10 text-sm uppercase hover:border-b'>About</li>
                         </Link>
-                        <Link href='/'>
+                        <Link href='/#skills'>
                             <li className='ml-10 text-sm uppercase hover:border-b'>Skills</li>
                         </Link>
                         <Link href='/'>
@@ -56,13 +67,13 @@ export default function Navbar() {
                     </div>
                     <div className='py-4 flex flex-col'>
                         <ul>
-                            <Link href='/'>
+                            <Link href='/#home'>
                                <li className='py-4 text-sm'>Home</li>
                             </Link>
-                            <Link href='/'>
+                            <Link href='/#about'>
                                <li className='py-4 text-sm'>About</li>
                             </Link>
-                            <Link href='/'>
+                            <Link href='/#skills'>
                                <li className='py-4 text-sm'>Skills</li>
                             </Link>
                             <Link href='/'>
