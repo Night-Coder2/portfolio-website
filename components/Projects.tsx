@@ -1,6 +1,6 @@
 import React from 'react'
 import ProjectItem from './ProjectItems';
-import DiscordImg from '../public/discord-server-and-waterbot.png';
+import DiscordImg from '../public/assets/Projects/discord-server-and-waterbot.png';
 
 export default function Projects() {
   return (
