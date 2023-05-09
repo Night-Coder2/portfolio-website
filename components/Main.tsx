@@ -7,8 +7,8 @@ export default function Main() {
     <div id='home' className='w-full h-screen text-center'>
         <div className='max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center'>
             <div>
-                <p className='uppercase text-sm tracking-widest text-white/80'>LETS BUILD SOMETHING TOGETHER</p>
-                <h1 className='text-white/100'>Hi, I am <span className=' text-green-700'>Sudhir</span> </h1>
+                <p className='uppercase text-sm tracking-widest text-white/80'>LETS BUILD SOMETHING TOGETHER.</p>
+                <h1 className='text-white/100'>Hi, I am <span className=' text-green-700'>Sudhir</span>.</h1>
                 <h1 className='py-2 text-white/100'>A Student Who Likes Coding.</h1>
                 <p className='py-4 text-white/80 max-w-[70%] m-auto'>I am a student who likes to code and build things. I am currently learning web development and I am also interested in embedded coding.</p>
                 <div className='flex items-center justify-between max-w-[200px] m-auto py-4'>
