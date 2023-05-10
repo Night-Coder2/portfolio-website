@@ -148,10 +148,10 @@ const Navbar = () => {
               </p>
               <div className='flex items-center justify-evenly my-4 w-full sm:w-[80%]'>
                   <div className='rounded-full shadow-lg shadow-gray-950 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-                    <Link href={'https://discord.gg/uquRPXkcnU'}><FaDiscord size={25} /></Link>
+                    <Link href={'https://discord.gg/uquRPXkcnU'} target={"_blank"}><FaDiscord size={25} /></Link>
                   </div>
                   <div className='rounded-full shadow-lg shadow-gray-950 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-                    <Link href='https://github.com/PhoenixLegen'>
+                    <Link href='https://github.com/PhoenixLegen' target={"_blank"}>
                         <FaGithub size={25} />
                     </Link>
                   </div>

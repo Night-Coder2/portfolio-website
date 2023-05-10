@@ -17,7 +17,7 @@ export default function Skills() {
             <h2 className='py-4'>What I Can Do</h2>
             <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
                 <div className='p-6 shadow-xl rounded-xl bg-white hover:scale-105 ease-in duration-300'>
-                    <Link href={'https://www.w3schools.com/html/'}><div className='grid grid-cols-2 gap-4 justify-center items-center'>
+                    <Link href={'https://www.w3schools.com/html/'} target={"_blank"}><div className='grid grid-cols-2 gap-4 justify-center items-center'>
                         <div className='m-auto'>
                             <Image src={html} alt="/" width={64} height={64} />
                         </div>
@@ -28,7 +28,7 @@ export default function Skills() {
 
                 </div>
                 <div className='p-6 shadow-xl rounded-xl bg-white hover:scale-105 ease-in duration-300'>
-                    <Link href={'https://react.dev'}><div className='grid grid-cols-2 gap-4 justify-center items-center'>
+                    <Link href={'https://react.dev'} target={"_blank"}><div className='grid grid-cols-2 gap-4 justify-center items-center'>
                         <div className='m-auto'>
                             <Image src={react} alt="/" width={64} height={64} />
                         </div>
@@ -39,7 +39,7 @@ export default function Skills() {
 
                 </div>
                 <div className='p-6 shadow-xl rounded-xl bg-white hover:scale-105 ease-in duration-300'>
-                    <Link href={'https://tailwindcss.com'}><div className='grid grid-cols-2 gap-4 justify-center items-center'>
+                    <Link href={'https://tailwindcss.com'} target={"_blank"}><div className='grid grid-cols-2 gap-4 justify-center items-center'>
                         <div className='m-auto'>
                             <Image src={tailwind} alt="/" width={64} height={64} />
                         </div>
@@ -50,7 +50,7 @@ export default function Skills() {
 
                 </div>
                 <div className='p-6 shadow-xl rounded-xl bg-white hover:scale-105 ease-in duration-300'>
-                    <Link href={'https://www.typescriptlang.org'}>
+                    <Link href={'https://www.typescriptlang.org'} target={"_blank"}>
                         <div className='grid grid-cols-2 gap-4 justify-center items-center'>
                             <div className='m-auto'>
                                 <Image src={typescript} alt="/" width={64} height={64} />
@@ -62,7 +62,7 @@ export default function Skills() {
                     </Link>
                 </div>
                 <div className='p-6 shadow-xl rounded-xl bg-white hover:scale-105 ease-in duration-300'>
-                    <Link href={'https://www.typescriptlang.org'}><div className='grid grid-cols-2 gap-4 justify-center items-center'>
+                    <Link href={'https://www.typescriptlang.org'} target={"_blank"}><div className='grid grid-cols-2 gap-4 justify-center items-center'>
                         <div className='m-auto'>
                             <Image src={nextjs} alt="/" width={64} height={64} />
                         </div>
@@ -73,7 +73,7 @@ export default function Skills() {
 
                 </div>
                 <div className='p-6 shadow-xl rounded-xl bg-white hover:scale-105 ease-in duration-300'>
-                    <Link href={'https://github.com'}><div className='grid grid-cols-2 gap-4 justify-center items-center'>
+                    <Link href={'https://github.com'} target={"_blank"}><div className='grid grid-cols-2 gap-4 justify-center items-center'>
                         <div className='m-auto'>
                             <Image src={github} alt="/" width={64} height={64} />
                         </div>
@@ -83,7 +83,7 @@ export default function Skills() {
                     </div></Link>
                 </div>
                 <div className='p-6 shadow-xl rounded-xl bg-white hover:scale-105 ease-in duration-300'>
-                    <Link href={'https://www.w3schools.com/js/'}><div className='grid grid-cols-2 gap-4 justify-center items-center'>
+                    <Link href={'https://www.w3schools.com/js/'} target={"_blank"}><div className='grid grid-cols-2 gap-4 justify-center items-center'>
                         <div className='m-auto'>
                             <Image src={javascript} alt="/" width={64} height={64} />
                         </div>

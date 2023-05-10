@@ -13,12 +13,12 @@ export default function Main() {
                 <p className='py-4 text-white/80 max-w-[70%] m-auto'>I am a student who likes to code and build things. I am currently learning web development and I am also interested in embedded coding.</p>
                 <div className='flex items-center justify-between max-w-[200px] m-auto py-4'>
                     <div className='rounded-full shadow-lg shadow-gray-950 p-3 ease-in cursor-pointer hover:scale-110 duration-300'>
-                        <Link href={'https://github.com/phoenixlegen'}>
+                        <Link href={'https://github.com/phoenixlegen'} target={"_blank"}>
                             <FaGithub size={35} />
                         </Link>
                     </div>
                     <div className='rounded-full shadow-lg shadow-gray-950 p-3 ease-in cursor-pointer hover:scale-110 duration-300'>
-                        <Link href={'https://discord.gg/uquRPXkcnU'}>
+                        <Link href={'https://discord.gg/uquRPXkcnU'} target={"_blank"}>
                             <FaDiscord size={35} />
                         </Link>
                     </div>
