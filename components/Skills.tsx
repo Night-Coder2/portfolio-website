@@ -62,7 +62,7 @@ export default function Skills() {
                     </Link>
                 </div>
                 <div className='p-6 shadow-xl rounded-xl bg-white hover:scale-105 ease-in duration-300'>
-                    <Link href={'https://www.typescriptlang.org'} target={"_blank"}><div className='grid grid-cols-2 gap-4 justify-center items-center'>
+                    <Link href={'https://nextjs.org'} target={"_blank"}><div className='grid grid-cols-2 gap-4 justify-center items-center'>
                         <div className='m-auto'>
                             <Image src={nextjs} alt="/" width={64} height={64} />
                         </div>
