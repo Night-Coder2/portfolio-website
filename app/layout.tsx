@@ -1,8 +1,7 @@
-import Image from 'next/image'
 import '@/styles/globals.css'
-import Head from 'next/head'
 import Navbar from '@/components/Navbar'
-import navLogo from '@/public/assets/navLogo.png'
+// @ts-ignore
+import {Analytics} from "@vercel/analytics/dist/react";
 
 export default function RootLayout({
   children,
@@ -23,7 +22,7 @@ export default function RootLayout({
       <body>
         <Navbar />
         {children}
-
+        <Analytics />
       </body>
     </html>
   )
