@@ -21,7 +21,7 @@ export default function Skills() {
                             <Image src={html} alt="/" width={64} height={64} />
                         </div>
                         <div className='flex flex-col items-center justify-center'>
-                            <h3 className='text-slate-950'>HTML</h3>
+                            <h3 className='text-slate-950 font-bold'>HTML</h3>
                         </div>
                     </div>
                 </div>
@@ -31,7 +31,7 @@ export default function Skills() {
                             <Image src={react} alt="/" width={64} height={64} />
                         </div>
                         <div className='flex flex-col items-center justify-center'>
-                            <h3 className='text-slate-950'>React</h3>
+                            <h3 className='text-slate-950 font-bold'>React</h3>
                         </div>
                     </div>
                 </div>
@@ -41,7 +41,7 @@ export default function Skills() {
                             <Image src={tailwind} alt="/" width={64} height={64} />
                         </div>
                         <div className='flex flex-col items-center justify-center'>
-                            <h3 className='text-slate-950'>Tailwind CSS</h3>
+                            <h3 className='text-slate-950 font-bold'>Tailwind CSS</h3>
                         </div>
                     </div>
                 </div>
@@ -51,7 +51,7 @@ export default function Skills() {
                                 <Image src={typescript} alt="/" width={64} height={64} />
                             </div>
                             <div className='flex flex-col items-center justify-center'>
-                                <h3 className='text-slate-950'>TypeScript</h3>
+                                <h3 className='text-slate-950 font-bold'>TypeScript</h3>
                             </div>
                         </div>
                 </div>
@@ -61,7 +61,7 @@ export default function Skills() {
                             <Image src={nextjs} alt="/" width={64} height={64} />
                         </div>
                         <div className='flex flex-col items-center justify-center'>
-                            <h3 className='text-slate-950'>Next.JS</h3>
+                            <h3 className='text-slate-950 font-bold'>Next.JS</h3>
                         </div>
                     </div>
                 </div>
@@ -71,7 +71,7 @@ export default function Skills() {
                             <Image src={github} alt="/" width={64} height={64} />
                         </div>
                         <div className='flex flex-col items-center justify-center'>
-                            <h3 className='text-slate-950'>github</h3>
+                            <h3 className='text-slate-950 font-bold'>GitHub</h3>
                         </div>
                     </div>
                 </div>
@@ -81,7 +81,7 @@ export default function Skills() {
                             <Image src={javascript} alt="/" width={64} height={64} />
                         </div>
                         <div className='flex flex-col items-center justify-center'>
-                            <h3 className='text-slate-950'>JavaScript</h3>
+                            <h3 className='text-slate-950 font-bold'>JavaScript</h3>
                         </div>
                     </div>
                 </div>
