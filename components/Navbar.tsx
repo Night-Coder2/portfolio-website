@@ -2,33 +2,16 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect, FC} from 'react';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import { FaDiscord, FaGithub} from 'react-icons/fa';
 
 // import { useRouter } from 'next/router';
 import NavLogo from '../public/assets/navLogo.png'
 
-const Navbar = () => {
+const Navbar:FC = () => {
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
-  // const [position, setPosition] = useState('fixed')
-  // const router = useRouter();
-
-  // useEffect(() => {
-  //   if (
-  //     router.asPath === '/property' ||
-  //     router.asPath === '/crypto' ||
-  //     router.asPath === '/netflix' ||
-  //     router.asPath === '/twitch'
-  //   ) {
-  //     setNavBg('transparent');
-  //     setLinkColor('#ecf0f3');
-  //   } else {
-  //     setNavBg('#ecf0f3');
-  //     setLinkColor('#1f2937');
-  //   }
-  // }, [router]);
 
   const handleNav = () => {
     setNav(!nav);

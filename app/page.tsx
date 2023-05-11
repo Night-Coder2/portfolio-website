@@ -1,8 +1,9 @@
 import About from "@/components/About";
 import Main from "@/components/Main";
 import Skills from "@/components/Skills";
+import {FC} from "react";
 
-export default function Page() {
+const Page:FC = () => {
   return (
     <div>
       <Main />
@@ -11,3 +12,5 @@ export default function Page() {
     </div>
   );
 }
+
+export default Page;

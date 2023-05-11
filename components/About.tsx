@@ -1,9 +1,9 @@
-import React from 'react'
+import React, {FC} from 'react'
 import AbtImg from '@/public/assets/about.jpg'
 import Image from 'next/image'
 import Link from 'next/link'
 
-export default function About() {
+const About:FC = () => {
   return (
     <div id='about' className='w-full md:h-screen p-2 flex items-center py-16'>
         <div className='max-w-[1240px] m-auto md:grid grid-cols-3 gap-8'>
@@ -28,3 +28,5 @@ export default function About() {
     </div>
   )
 }
+
+export default About

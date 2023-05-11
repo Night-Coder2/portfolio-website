@@ -1,8 +1,8 @@
 import Link from 'next/link'
-import React from 'react'
+import React, {FC} from 'react'
 import {FaGithub, FaDiscord} from 'react-icons/fa'
 
-export default function Main() {
+const Main:FC = () =>{
   return (
     <div id='home' className='w-full h-screen text-center'>
         <div className='max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center'>
@@ -28,3 +28,5 @@ export default function Main() {
     </div>
   )
 }
+
+export default Main
