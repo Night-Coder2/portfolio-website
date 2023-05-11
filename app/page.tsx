@@ -1,6 +1,6 @@
-import About from "@/components/About";
-import Main from "@/components/Main";
-import Skills from "@/components/Skills";
+import About from "@/components/Portfolio/About";
+import Main from "@/components/Portfolio/Main";
+import Skills from "@/components/Portfolio/Skills";
 import {FC} from "react";
 
 const Page:FC = () => {

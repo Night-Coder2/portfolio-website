@@ -1,0 +1,32 @@
+.border-todo-4 {
+    border-left-width: 4px;
+    border-right-width: 0;
+}
+
+.left-move {
+    right: 60px;
+}
+
+.h {
+    @apply text-xl
+}
+
+.div1 {
+    @apply bg-gray-900 text-gray-100 mx-auto text-center w-full h-full text-lg
+}
+
+.input {
+    @apply bg-gray-100 text-gray-900
+}
+
+.addTodo {
+    @apply bg-red-500 border-todo-4 border-gray-900 font-sans
+}
+
+.clearComplete {
+    @apply bg-blue-400 border-todo-4 border-gray-900
+}
+
+.aTag {
+    @apply text-cyan-500 underline inset-y-full
+}

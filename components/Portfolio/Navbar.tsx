@@ -7,7 +7,7 @@ import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import { FaDiscord, FaGithub} from 'react-icons/fa';
 
 // import { useRouter } from 'next/router';
-import NavLogo from '../public/assets/navLogo.png'
+import NavLogo from '../../public/assets/navLogo.png'
 
 const Navbar:FC = () => {
   const [nav, setNav] = useState(false);
@@ -57,6 +57,9 @@ const Navbar:FC = () => {
             </li>
             <li className='ml-10 text-sm uppercase hover:border-b'>
               <Link href='/#skills'>Skills</Link>
+            </li>
+            <li className='ml-10 text-sm uppercase hover:border-b'>
+              <Link href='/todolist'>TodoList: beta</Link>
             </li>
           </ul>
           {/* Hamburger Icon */}
@@ -122,6 +125,11 @@ const Navbar:FC = () => {
               <Link href='/#skills'>
                 <li onClick={() => setNav(false)} className='py-4 text-sm'>
                   Skills
+                </li>
+              </Link>
+              <Link href='/todolist'>
+                <li onClick={() => setNav(false)} className='py-4 text-sm'>
+                  TodoList: beta
                 </li>
               </Link>
             </ul>

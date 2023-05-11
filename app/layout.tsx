@@ -1,5 +1,5 @@
 import '@/styles/globals.css'
-import Navbar from '@/components/Navbar'
+import Navbar from '@/components/Portfolio/Navbar'
 import React from "react";
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
