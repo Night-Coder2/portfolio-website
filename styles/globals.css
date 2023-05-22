@@ -14,17 +14,17 @@ scroll-behavior: smooth !important;
 
 /* Track */
 ::-webkit-scrollbar-track {
-  @apply bg-gray-700
+  @apply bg-gray-600
 }
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  @apply bg-gray-900
+  @apply bg-gray-700
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-gray-900
+  @apply bg-gray-800
 }
 
 @layer base {
