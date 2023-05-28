@@ -58,9 +58,6 @@ const Navbar:FC = () => {
             <li className='ml-10 text-sm uppercase hover:border-b'>
               <Link href='/#skills'>Skills</Link>
             </li>
-            <li className='ml-10 text-sm uppercase hover:border-b'>
-              <Link href='/todolist'>TodoList: Under development</Link>
-            </li>
           </ul>
           {/* Hamburger Icon */}
           <div
@@ -125,11 +122,6 @@ const Navbar:FC = () => {
               <Link href='/#skills'>
                 <li onClick={() => setNav(false)} className='py-4 text-sm'>
                   Skills
-                </li>
-              </Link>
-              <Link href='/todolist'>
-                <li onClick={() => setNav(false)} className='py-4 text-sm'>
-                  TodoList: Under development
                 </li>
               </Link>
             </ul>
