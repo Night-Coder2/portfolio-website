@@ -11,11 +11,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
             <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
             <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
-            <title>Jeb&apos;s Portfolio</title>
+            <title>Sudhir&apos;s Portfolio</title>
             <meta charSet="UTF-8"/>
             <meta name="description" content="My Portfolio"/>
             <meta name="keywords" content="HTML, CSS, JavaScript"/>
-            <meta name="author" content="Jeb"/>
+            <meta name="author" content="Sudhir"/>
             <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         </head>
         <body>
