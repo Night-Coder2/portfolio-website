@@ -4,12 +4,13 @@
   "private": true,
   "scripts": {
     "deploy": "vercel deploy",
-    "dev": "next dev",
+    "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
     "@prisma/client": "^4.14.0",
     "@types/node": "18.16.3",
     "@types/react": "18.2.5",
