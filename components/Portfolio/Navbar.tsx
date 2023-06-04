@@ -8,6 +8,7 @@ import { FaDiscord, FaGithub} from 'react-icons/fa';
 
 // import { useRouter } from 'next/router';
 import NavLogo from '../../public/assets/navLogo.png'
+import { motion } from 'framer-motion';
 
 const Navbar:FC = () => {
   const [nav, setNav] = useState(false);
@@ -63,12 +64,14 @@ const Navbar:FC = () => {
             </li>
           </ul>
           {/* Hamburger Icon */}
-          <div
+          <motion.div
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
             onClick={handleNav}
-            className='md:hidden'
+            className='md:hidden rounded-full shadow-lg shadow-gray-950 p-3 ease-in cursor-pointer hover:scale-110 duration-300'
           >
             <AiOutlineMenu size={25} />
-          </div>
+          </motion.div>
         </div>
       </div>
 
@@ -97,12 +100,14 @@ const Navbar:FC = () => {
                     alt='/'
                   />
               </Link>
-              <div
+              <motion.div
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
                 onClick={handleNav}
-                className='rounded-full shadow-lg shadow-gray-950 p-3 cursor-pointer'
+                className='rounded-full shadow-lg shadow-gray-950 p-3 cursor-pointer hover:scale-105 ease-in duration-300'
               >
-                <AiOutlineClose />
-              </div>
+                <AiOutlineClose size={25} />
+              </motion.div>
             </div>
             <div className='border-b border-gray-950 my-4'>
               <p className='w-[85%] md:w-[90%] py-4'>

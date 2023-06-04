@@ -95,9 +95,13 @@ export default function Contact() {
         </div>
         <div className='flex justify-center items-center py-16'>
                 <Link href={'#home'}>
-                    <div className='rounded-full shadow-lg shadow-gray-950 p-3 ease-in cursor-pointer hover:scale-110 duration-300'>
+                    <motion.div 
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        className='rounded-full shadow-lg shadow-gray-950 p-3 ease-in cursor-pointer hover:scale-110 duration-300'
+                    >
                         <HiOutlineChevronDoubleUp size={35} />
-                    </div>
+                    </motion.div>
                 </Link>
                     
         </div>
