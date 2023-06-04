@@ -1,3 +1,5 @@
+'use client'
+
 import React, {FC} from 'react'
 import html from '@/public/assets/Skills/html.png'
 import nextjs from '@/public/assets/Skills/nextjs.png'
@@ -7,10 +9,12 @@ import typescript from '@/public/assets/Skills/typescript.png'
 import github from '@/public/assets/Skills/github.png'
 import javascript from '@/public/assets/Skills/javascript.png'
 import Image from 'next/image'
+import Fade from '../Fade/Fade'
 
 const Skills:FC = () => {
   return (
     <div id='skills' className='w-full lg:h-screen p-2'>
+        <Fade>
         <div className='max-w-[1240px] mx-auto flex flex-col justify-center h-full'>
             <p className='text-xl tracking-widest uppercase text-white/80'>Skills</p>
             <h2 className='py-4'>What I Can Do</h2>
@@ -87,6 +91,7 @@ const Skills:FC = () => {
                 </div>
             </div>
         </div>
+        </Fade>
     </div>
   )
 }
