@@ -2,7 +2,12 @@
 import { motion, useAnimation } from 'framer-motion';
 import { useEffect, useRef } from 'react';
 
-const Fade = ({ children }: any) => {
+interface Props {
+  children: React.ReactNode;
+  duration?: number;
+}
+
+const Fade = ({ children, duration = 0.5 }: Props) => {
   const controls = useAnimation();
   const ref = useRef(null);
 
@@ -40,7 +45,7 @@ const Fade = ({ children }: any) => {
       initial="hidden"
       animate={controls}
       variants={variants}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: duration }}
     >
       {children}
     </motion.div>
