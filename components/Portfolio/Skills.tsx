@@ -14,8 +14,9 @@ import Fade from '../Fade/Fade'
 const Skills:FC = () => {
   return (
     <div id='skills' className='w-full lg:h-screen p-2'>
-        <Fade>
+        
         <div className='max-w-[1240px] mx-auto flex flex-col justify-center h-full'>
+        <Fade>
             <p className='text-xl tracking-widest uppercase text-white/80'>Skills</p>
             <h2 className='py-4'>What I Can Do</h2>
             <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
@@ -90,8 +91,9 @@ const Skills:FC = () => {
                     </div>
                 </div>
             </div>
-        </div>
+            
         </Fade>
+        </div>
     </div>
   )
 }

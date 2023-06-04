@@ -1,12 +1,13 @@
 import Link from 'next/link'
 import React, {FC} from 'react'
 import {FaGithub, FaDiscord} from 'react-icons/fa'
+import Fade from '../Fade/Fade'
 
 const Main:FC = () =>{
   return (
     <div id='home' className='w-full h-screen text-center'>
         <div className='max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center'>
-            <div>
+            <Fade>
                 <p className='uppercase text-sm tracking-widest text-white/80'>LETS BUILD SOMETHING TOGETHER.</p>
                 <h1 className='text-white/100'>Hi, I am <span className=' text-green-700'>Sudhir</span>.</h1>
                 <h1 className='py-2 text-white/100'>A Student Who Likes Coding.</h1>
@@ -23,7 +24,7 @@ const Main:FC = () =>{
                         </Link>
                     </div>
                 </div>
-            </div>
+            </Fade>
         </div>
     </div>
   )

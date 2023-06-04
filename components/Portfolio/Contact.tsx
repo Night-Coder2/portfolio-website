@@ -42,7 +42,6 @@ export default function Contact() {
     }
   return (
     <div id='contact' className='max-w-[1240px] m-auto px-2 py-16 w-full'>
-
         <Fade>
         <p className='text-xl tracking-widest uppercase text-white'>Contact</p>
         <h2 className='py-4'>Get In Touch</h2>
