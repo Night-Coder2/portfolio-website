@@ -18,17 +18,22 @@ export default function Contact() {
         const Message = MessageRef.current.value
         console.log(Name, Email, Message)
 
+        if(!Name || !Email || !Message) {
+            alert('Please fill the form')
+            return
+        }
+
         emailjs.send('service_glhjzzb', 'template_z2hq6sf', {
             from_name: Name,
             to_name : 'sudhir',
             from_email: Email,
             to_email: 'sudhircks@gmail.com',
-            message: Message
-        }, 'ZNCgwJLMP2GXH8R8I').then((result) => {alert('success')}).catch((error) => {alert(error.text)}).then(() => {
-            NameRef.current.value = null;
-            EmailRef.current.value = null;
-            MessageRef.current.value = null;
-        })
+            message: Message }, 'ZNCgwJLMP2GXH8R8I').then((result) => {
+                alert('success')
+                NameRef.current.value = null;
+                EmailRef.current.value = null;
+                MessageRef.current.value = null;
+            })
     }
   return (
     <div id='contact' className='w-full lg:h-screen'>
