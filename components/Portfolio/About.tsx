@@ -16,12 +16,7 @@ const About:FC = () => {
                     <h2 className='py-4'>Who I Am</h2>
                     <p className='py-2 text-gray-600'>{'//I am not your normal developer'}</p>
                     <p className='py-2'>
-                        I am high school student. I had started coding from a young age compared to others. <br />
-                        In my spare time I started coding Arduino microcontroller then i was introduced to <br />
-                        Raspberry Pi from which i learnt Python. After that, i was introduced to React, Docker,<br />
-                        Next.js. I used run docker on my Raspberry Pi learnt networking from it. Now I have advanced <br />
-                        hardware compared to before. I have also started a Discord server make sure to check it out. <br />
-                        Now i am writting this application in Next.js
+                        I am a high school student. I started coding from 10 years old. I started with an <Link href={"https://store-usa.arduino.cc/products/arduino-uno-rev3?selectedStore=us"} className='underline text-blue-500 font-bold'>Arduino</Link> board. I create projects as hobbies and to impress people around me. I do front-end UI development. I started of with making electronic projects such as table lamp and all which sparked my technological intrest. Later I started to use a <span className='font-bold'>Linux Computer</span> to run docker and websites. I used a <Link href={'https://www.raspberrypi.com/products/raspberry-pi-4-model-b/'} className='underline text-blue-500 font-bold'>Raspberry Pi</Link> for those purposes. I learnt many things from it such as front-end designing and python. 
                     </p>
                     <p className='py-2 underline text-xl'><Link href='https://discord.gg/uquRPXkcnU' target={"_blank"}>Check out my Discord server.</Link></p>
                 </div>

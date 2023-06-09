@@ -5,9 +5,10 @@ import { useEffect, useRef } from 'react';
 interface Props {
   children: React.ReactNode;
   duration?: number;
+  className? : string;
 }
 
-const Fade = ({ children, duration = 0.5 }: Props) => {
+const Fade = ({ children, duration = 0.5, className = '' }: Props) => {
   const controls = useAnimation();
   const ref = useRef(null);
 
