@@ -6,7 +6,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { motion, useAnimation } from 'framer-motion';
 import { useEffect, useRef } from 'react';
-import { container, item } from '../Fade/variants';
+import { container, item } from '@/components/Fade/variants';
 
 const About:FC = () => {
 

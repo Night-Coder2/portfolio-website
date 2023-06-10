@@ -18,3 +18,10 @@ export const item = {
         opacity: 1
     }
 };
+
+const variants = {
+    container,
+    item
+}
+
+export default variants;

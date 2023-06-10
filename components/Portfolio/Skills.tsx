@@ -11,7 +11,7 @@ import javascript from '@/public/assets/Skills/javascript.png'
 import Image from 'next/image'
 import { motion, useAnimation } from 'framer-motion';
 import { useEffect, useRef } from 'react';
-import { container, item } from '../Fade/variants';
+import { container, item } from '@/components/Fade/variants';
 
 const Skills:FC = () => {
 

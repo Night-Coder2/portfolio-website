@@ -4,27 +4,7 @@ import { useEffect, useRef } from 'react';
 import Link from 'next/link'
 import React, {FC} from 'react'
 import {FaGithub, FaDiscord} from 'react-icons/fa'
-
-const container = {
-    hidden: { opacity: 0, x: -100 },
-    visible: {
-        opacity: 1,
-        x: 0,
-        transition: {
-            duration: 0.5,
-            delayChildren: 0.3,
-            staggerChildren: 0.2
-        }
-    }
-};
-  
-const item = {
-    hidden: { x: -100, opacity: 0 },
-    visible: {
-        x: 0,
-        opacity: 1
-    }
-};
+import { container, item } from '@/components/Fade/variants';
 
 const Main:FC = () =>{
 

@@ -9,7 +9,7 @@ import { FaDiscord, FaGithub} from 'react-icons/fa';
 // import { useRouter } from 'next/router';
 import NavLogo from '../../public/assets/navLogo.png'
 import { motion, useAnimation } from 'framer-motion';
-import { container, item } from '../Fade/variants';
+import { container, item } from '@/components/Fade/variants';
 
 const Navbar:FC = () => {
   const [nav, setNav] = useState(false);

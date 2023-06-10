@@ -7,8 +7,7 @@ import {FaGithub, FaDiscord} from 'react-icons/fa'
 import {HiOutlineChevronDoubleUp} from 'react-icons/hi'
 import emailjs from '@emailjs/browser';
 import { motion, useAnimation } from 'framer-motion';
-import { container, item } from '../Fade/variants';
-
+import { container, item } from '@/components/Fade/variants';
 export default function Contact() {
 
     const controls = useAnimation();
