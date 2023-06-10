@@ -13,8 +13,7 @@ const Fade = ({ children, duration = 0.5, className = '' }: Props) => {
   const ref = useRef(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
+    const observer = new IntersectionObserver(([entry]) => {
         if (entry.isIntersecting) {
           controls.start('visible');
         } else {
@@ -47,6 +46,7 @@ const Fade = ({ children, duration = 0.5, className = '' }: Props) => {
       animate={controls}
       variants={variants}
       transition={{ duration: duration }}
+      className={className}
     >
       {children}
     </motion.div>

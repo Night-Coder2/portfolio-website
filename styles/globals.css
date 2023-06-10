@@ -8,26 +8,26 @@ html {
 scroll-behavior: smooth !important;
 }
 
-::-webkit-scrollbar {
-  width: 12px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  @apply bg-gray-600
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  @apply bg-gray-700
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  @apply bg-gray-800
-}
-
 @layer base {
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-600
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-700
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-800
+  }
+  
   body {
     @apply bg-gray-900 text-white tracking-wide
   }

@@ -2,13 +2,14 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import React, {useState, useEffect, FC} from 'react';
+import React, {useState, useEffect, FC, useRef} from 'react';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import { FaDiscord, FaGithub} from 'react-icons/fa';
 
 // import { useRouter } from 'next/router';
 import NavLogo from '../../public/assets/navLogo.png'
-import { motion } from 'framer-motion';
+import { motion, useAnimation } from 'framer-motion';
+import { container, item } from '../Fade/variants';
 
 const Navbar:FC = () => {
   const [nav, setNav] = useState(false);
@@ -17,6 +18,31 @@ const Navbar:FC = () => {
   const handleNav = () => {
     setNav(!nav);
   };
+
+  const controls = useAnimation();
+  const ref = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(([entry]) => {
+            if (entry.isIntersecting) {
+                controls.start('visible');
+            } else {
+                controls.start('hidden');
+            }
+        },
+        { threshold: 0.1 } // Adjust the threshold as needed
+        );
+
+        if (ref.current) {
+        observer.observe(ref.current);
+        }
+
+        return () => {
+            if (ref.current) {
+                observer.unobserve(ref.current);
+            }
+        };
+    }, [controls]);
 
   useEffect(() => {
     const handleShadow = () => {
@@ -38,30 +64,32 @@ const Navbar:FC = () => {
           : 'fixed w-full h-20 z-[100] bg-gray-900'
       }
     >
-      <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
-        <Link href='/#home'>
-            <Image
-              src={NavLogo}
-              alt='/'
-              width='125'
-              height='50'
-              className='cursor-pointer'
-            />
-        </Link>
+      <motion.div variants={container} initial="hidden" animate="visible" className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
+        <motion.div variants={item}>
+          <Link href='/#home'>
+              <Image
+                src={NavLogo}
+                alt='/'
+                width='125'
+                height='50'
+                className='cursor-pointer'
+              />
+          </Link>
+        </motion.div>
         <div>
           <ul className='hidden md:flex text-white pr-10'>
-            <li className='ml-10 text-sm uppercase hover:border-b'>
+            <motion.li variants={item} className='ml-10 text-sm uppercase hover:border-b'>
               <Link href='/#home'>Home</Link>
-            </li>
-            <li className='ml-10 text-sm uppercase hover:border-b'>
+            </motion.li>
+            <motion.li variants={item} className='ml-10 text-sm uppercase hover:border-b'>
               <Link href='/#about'>About</Link>
-            </li>
-            <li className='ml-10 text-sm uppercase hover:border-b'>
+            </motion.li>
+            <motion.li variants={item} className='ml-10 text-sm uppercase hover:border-b'>
               <Link href='/#skills'>Skills</Link>
-            </li>
-            <li className='ml-10 text-sm uppercase hover:border-b'>
+            </motion.li>
+            <motion.li variants={item} className='ml-10 text-sm uppercase hover:border-b'>
               <Link href='/#contact'>Contact</Link>
-            </li>
+            </motion.li>
           </ul>
           {/* Hamburger Icon */}
           <motion.div
@@ -73,7 +101,7 @@ const Navbar:FC = () => {
             <AiOutlineMenu size={25} />
           </motion.div>
         </div>
-      </div>
+      </motion.div>
 
       {/* Mobile Menu */}
       {/* Overlay */}
