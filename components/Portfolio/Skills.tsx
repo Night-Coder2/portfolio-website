@@ -48,7 +48,7 @@ const Skills:FC = () => {
             <motion.p variants={item} className='text-xl tracking-widest uppercase text-white/80'>Skills</motion.p>
             <motion.h2 variants={item} className='py-4'>What I Can Do</motion.h2>
             <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
-                <motion.div variants={item} className='p-6 shadow-xl rounded-xl bg-white hover:scale-105 ease-in duration-300'>
+                <motion.div whileHover={{ scale: 1.1 }} variants={item} className='p-6 shadow-xl rounded-xl bg-white hover:scale-105 ease-in duration-300'>
                     <div className='grid grid-cols-2 gap-4 justify-center items-center'>
                         <div className='m-auto'>
                             <Image src={html} alt="/" width={64} height={64} />
@@ -58,7 +58,7 @@ const Skills:FC = () => {
                         </div>
                     </div>
                 </motion.div>
-                <motion.div variants={item} className='p-6 shadow-xl rounded-xl bg-white hover:scale-105 ease-in duration-300'>
+                <motion.div whileHover={{ scale: 1.1 }} variants={item} className='p-6 shadow-xl rounded-xl bg-white hover:scale-105 ease-in duration-300'>
                     <div className='grid grid-cols-2 gap-4 justify-center items-center'>
                         <div className='m-auto'>
                             <Image src={react} alt="/" width={64} height={64} />
@@ -68,7 +68,7 @@ const Skills:FC = () => {
                         </div>
                     </div>
                 </motion.div>
-                <motion.div variants={item} className='p-6 shadow-xl rounded-xl bg-white hover:scale-105 ease-in duration-300'>
+                <motion.div whileHover={{ scale: 1.1 }} variants={item} className='p-6 shadow-xl rounded-xl bg-white hover:scale-105 ease-in duration-300'>
                     <div className='grid grid-cols-2 gap-4 justify-center items-center'>
                         <div className='m-auto'>
                             <Image src={tailwind} alt="/" width={64} height={64} />
@@ -78,7 +78,7 @@ const Skills:FC = () => {
                         </div>
                     </div>
                 </motion.div>
-                <motion.div variants={item} className='p-6 shadow-xl rounded-xl bg-white hover:scale-105 ease-in duration-300'>
+                <motion.div whileHover={{ scale: 1.1 }} variants={item} className='p-6 shadow-xl rounded-xl bg-white hover:scale-105 ease-in duration-300'>
                     <div className='grid grid-cols-2 gap-4 justify-center items-center'>
                         <div className='m-auto'>
                             <Image src={typescript} alt="/" width={64} height={64} />
@@ -88,7 +88,7 @@ const Skills:FC = () => {
                         </div>
                     </div>
                 </motion.div>
-                <motion.div variants={item} className='p-6 shadow-xl rounded-xl bg-white hover:scale-105 ease-in duration-300'>
+                <motion.div whileHover={{ scale: 1.1 }} variants={item} className='p-6 shadow-xl rounded-xl bg-white hover:scale-105 ease-in duration-300'>
                     <div className='grid grid-cols-2 gap-4 justify-center items-center'>
                         <div className='m-auto'>
                             <Image src={nextjs} alt="/" width={64} height={64} />
@@ -98,7 +98,7 @@ const Skills:FC = () => {
                         </div>
                     </div>
                 </motion.div>
-                <motion.div variants={item} className='p-6 shadow-xl rounded-xl bg-white hover:scale-105 ease-in duration-300'>
+                <motion.div whileHover={{ scale: 1.1 }} variants={item} className='p-6 shadow-xl rounded-xl bg-white hover:scale-105 ease-in duration-300'>
                     <div className='grid grid-cols-2 gap-4 justify-center items-center'>
                         <div className='m-auto'>
                             <Image src={github} alt="/" width={64} height={64} />
@@ -108,7 +108,7 @@ const Skills:FC = () => {
                         </div>
                     </div>
                 </motion.div>
-                <motion.div variants={item} className='p-6 shadow-xl rounded-xl bg-white hover:scale-105 ease-in duration-300'>
+                <motion.div whileHover={{ scale: 1.1 }} variants={item} className='p-6 shadow-xl rounded-xl bg-white hover:scale-105 ease-in duration-300'>
                     <div className='grid grid-cols-2 gap-4 justify-center items-center'>
                         <div className='m-auto'>
                             <Image src={javascript} alt="/" width={64} height={64} />
