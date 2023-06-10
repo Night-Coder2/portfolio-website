@@ -64,7 +64,7 @@ const Navbar:FC = () => {
           : 'fixed w-full h-20 z-[100] bg-gray-900'
       }
     >
-      <motion.div variants={container} initial="hidden" animate="visible" className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
+      <motion.div variants={container} initial="hidden" animate={"visible"} className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
         <motion.div variants={item}>
           <Link href='/#home'>
               <Image
