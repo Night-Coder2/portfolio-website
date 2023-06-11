@@ -22,27 +22,27 @@ const Navbar:FC = () => {
   const controls = useAnimation();
   const ref = useRef(null);
 
-    useEffect(() => {
-        const observer = new IntersectionObserver(([entry]) => {
-            if (entry.isIntersecting) {
-                controls.start('visible');
-            } else {
-                controls.start('hidden');
-            }
-        },
-        { threshold: 0.1 } // Adjust the threshold as needed
-        );
-
-        if (ref.current) {
-        observer.observe(ref.current);
+  useEffect(() => {
+    const observer = new IntersectionObserver(([entry]) => {
+        if (entry.isIntersecting) {
+            controls.start('visible');
+        } else {
+            controls.start('hidden');
         }
+    },
+    { threshold: 0.1 } // Adjust the threshold as needed
+    );
 
-        return () => {
-            if (ref.current) {
-                observer.unobserve(ref.current);
-            }
-        };
-    }, [controls]);
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, [controls]);
 
   useEffect(() => {
     const handleShadow = () => {

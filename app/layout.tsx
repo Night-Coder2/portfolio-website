@@ -1,6 +1,7 @@
 'use client'
 import '@/styles/globals.css'
 import Navbar from '@/components/Portfolio/Navbar/Navbar'
+import Footer from '@/components/Portfolio/Footer/Footer'
 import React from "react";
 import {Analytics} from "@vercel/analytics/react";
 import { AnimatePresence } from 'framer-motion';
@@ -23,6 +24,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <body>
                 <AnimatePresence>
                     <Navbar/>
+                    <Footer />
                     {children}
                     <Analytics/>
                 </AnimatePresence>
