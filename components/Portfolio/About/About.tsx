@@ -1,7 +1,7 @@
 'use client'
 
 import React, {FC} from 'react'
-import AbtImg from './about.jpg'
+import AbtImg from './personcoding.png'
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion, useAnimation } from 'framer-motion';
@@ -57,7 +57,7 @@ const About:FC = () => {
 
   return (
     <div id='about' className='w-full md:h-screen p-2 flex items-center py-16'>
-        <motion.div ref={ref} variants={container} initial={"hidden"} animate={controls} className='max-w-[1240px] m-auto md:grid grid-cols-3 gap-8'>
+        <motion.div ref={ref} variants={container} initial={"hidden"} animate={controls} className='max-w-[1240px] m-auto lg:grid grid-cols-3 gap-8'>
             <div className='col-span-2'>
                 <motion.p variants={item} className='uppercase text-xl tracking-widest'>About</motion.p>
                 <motion.h2 variants={item} className='py-4'>Who I Am</motion.h2>
@@ -67,7 +67,7 @@ const About:FC = () => {
                 </motion.p>
                 <motion.p variants={item} className='py-2 underline text-xl'><Link href='https://discord.gg/uquRPXkcnU' target={"_blank"}>Check out my Discord server.</Link></motion.p>
             </div>
-            <div className='w-full h-auto m-auto shadow-xl shadow-gray-950 rounded-xl flex items-center justify-center p-4 hover:scale-105 ease-in duration-300'>
+            <div className='w-full md:hidden lg:flex h-auto m-auto shadow-xl shadow-gray-950 rounded-xl items-center justify-center p-4 hover:scale-105 ease-in duration-300'>
                 <Image src={AbtImg} alt="/" className='rounded-xl'/>
             </div>
         </motion.div>

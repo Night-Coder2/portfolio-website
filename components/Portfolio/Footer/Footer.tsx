@@ -11,17 +11,18 @@ const Footer = () => {
     const ref = useRef(null);
 
     const variants = {
-        hidden: { opacity: 0 },
-        visible: { opacity: 1 },
+        hidden: { opacity: 0, y: "100%" },
+        visible: { opacity: 1, y:"0%" },
     };
 
     useEffect(() => {
         const handleShadow = () => {
             if (ref.current && window.scrollY >= 180) {
                 obs.observe(ref.current);
+                controls.start('visible')
             } else if(ref.current) {
                 obs.unobserve(ref.current)
-                controls.start("hidden")
+                controls.start('hidden')
             }
         };
         window.addEventListener('scroll', handleShadow);
@@ -40,9 +41,9 @@ const Footer = () => {
         obs = observer
     }, [controls]);
     return (
-    <div style={{backgroundColor: 'transparent'}} className='fixed w-full h-20 shadow-xl z-[100] bottom-0 ease-in-out duration-300 bg-gray-900'>
+    <div style={{backgroundColor: 'transparent'}} className='fixed w-full h-[7rem] shadow-xl z-[100] bottom-0 ease-in-out duration-300 bg-gray-900'>
         <motion.div ref={ref} variants={variants} initial="hidden" animate={controls} transition={{duration:0.2}} className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
-            <Link href={'/#home'} className='absolute right-3'><BsFillArrowUpCircleFill size={32}/></Link>
+            <Link href={'/#home'} className='absolute right-5'><BsFillArrowUpCircleFill size={40}/></Link>
         </motion.div>
     </div>
   )

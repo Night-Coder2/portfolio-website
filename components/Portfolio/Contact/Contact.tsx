@@ -76,7 +76,7 @@ export default function Contact() {
                         <div>
                             <h2 className='py-2'>Sudhir</h2>
                             <p>Student</p>
-                            <p className='pt-4 text-base'>I am available after 4:30 IST for any coding stuff just contact me on discord</p>
+                            <p className='pt-4 text-base'>I am available after 16:30 IST for any coding stuff just contact me on <Link href='https://discord.gg/uquRPXkcnU' target={"_blank"}>Discord</Link>.</p>
                         </div>
                         <p className='pt-10 pb-3 uppercase'>connect with me</p>
                         <div className='flex items-center justify-between max-w-[200px] m-auto'>
@@ -113,17 +113,6 @@ export default function Contact() {
                             <button type='submit' className='w-full text-white rounded-lg p-3 hover:scale-105 pt-4 duration-150'>Send message</button>
                     </form>
                 </motion.div>
-            </div>
-            <div className='flex justify-center items-center py-16'>
-                <Link href={'#home'}>
-                    <motion.div 
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.9 }}
-                        className='rounded-full shadow-lg shadow-gray-950 p-3 ease-in cursor-pointer hover:scale-110 duration-300'
-                    >
-                        <HiOutlineChevronDoubleUp size={35} />
-                    </motion.div>
-                </Link>
             </div>
         </motion.div>
     </div>
