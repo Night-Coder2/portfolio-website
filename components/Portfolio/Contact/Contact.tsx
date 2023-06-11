@@ -1,6 +1,6 @@
 'use client'
 import React, {useRef, useEffect} from 'react'
-import ContactImg from '@/public/assets/contact.jpg';
+import ContactImg from './contact.jpg';
 import Image from 'next/image'
 import Link from 'next/link'
 import {FaGithub, FaDiscord} from 'react-icons/fa'

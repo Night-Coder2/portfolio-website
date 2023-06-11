@@ -1,6 +1,6 @@
 'use client'
 import '@/styles/globals.css'
-import Navbar from '@/components/Portfolio/Navbar'
+import Navbar from '@/components/Portfolio/Navbar/Navbar'
 import React from "react";
 import {Analytics} from "@vercel/analytics/react";
 import { AnimatePresence } from 'framer-motion';

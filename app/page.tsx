@@ -1,7 +1,7 @@
-import About from "@/components/Portfolio/About";
-import Main from "@/components/Portfolio/Main";
-import Skills from "@/components/Portfolio/Skills";
-import Contact from "@/components/Portfolio/Contact";
+import About from "@/components/Portfolio/About/About";
+import Main from "@/components/Portfolio/Main/Main";
+import Skills from "@/components/Portfolio/Skills/Skills";
+import Contact from "@/components/Portfolio/Contact/Contact";
 import {FC} from "react";
 
 const Page:FC = () => {

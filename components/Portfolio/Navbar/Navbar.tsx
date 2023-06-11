@@ -7,7 +7,7 @@ import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import { FaDiscord, FaGithub} from 'react-icons/fa';
 
 // import { useRouter } from 'next/router';
-import NavLogo from '../../public/assets/navLogo.png'
+import NavLogo from './navLogo.png'
 import { motion, useAnimation } from 'framer-motion';
 import { container, item } from '@/components/Fade/variants';
 

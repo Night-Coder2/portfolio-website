@@ -1,13 +1,13 @@
 'use client'
 
 import React, {FC} from 'react'
-import html from '@/public/assets/Skills/html.png'
-import nextjs from '@/public/assets/Skills/nextjs.png'
-import react from '@/public/assets/Skills/react.png'
-import tailwind from '@/public/assets/Skills/tailwind.png'
-import typescript from '@/public/assets/Skills/typescript.png'
-import github from '@/public/assets/Skills/github.png'
-import javascript from '@/public/assets/Skills/javascript.png'
+import html from './Skills/html.png'
+import nextjs from './Skills/nextjs.png'
+import react from './Skills/react.png'
+import tailwind from './Skills/tailwind.png'
+import typescript from './Skills/typescript.png'
+import github from './Skills/github.png'
+import javascript from './Skills/javascript.png'
 import Image from 'next/image'
 import { motion, useAnimation } from 'framer-motion';
 import { useEffect, useRef } from 'react';
