@@ -114,7 +114,7 @@ const Navbar:FC = () => {
         }
       >
         {/* Side Drawer Menu */}
-        <div
+        <motion.div variants={container} initial="hidden" animate={controls} ref={ref}
           className={
             nav
               ? ' fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-gray-900 p-5 ease-in duration-500'
@@ -123,17 +123,20 @@ const Navbar:FC = () => {
         >
           <div>
             <div className='flex w-full items-center justify-between'>
-              <Link href='/'>
-                  <Image
-                    src={NavLogo}
-                    width='87'
-                    height='35'
-                    alt='/'
-                  />
-              </Link>
+              <motion.div variants={item}>
+                <Link href='/'>
+                    <Image
+                      src={NavLogo}
+                      width='87'
+                      height='35'
+                      alt='/'
+                    />
+                </Link>
+              </motion.div>
               <motion.div
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
+                variants={item}
                 onClick={handleNav}
                 className='rounded-full shadow-lg shadow-gray-950 p-3 cursor-pointer hover:scale-105 ease-in duration-300'
               >
@@ -141,61 +144,61 @@ const Navbar:FC = () => {
               </motion.div>
             </div>
             <div className='border-b border-gray-950 my-4'>
-              <p className='w-[85%] md:w-[90%] py-4'>
+              <motion.p variants={item} className='w-[85%] md:w-[90%] py-4'>
                 Let&#39;s build something legendary together.
-              </p>
+              </motion.p>
             </div>
           </div>
           <div className='py-4 flex flex-col'>
             <ul className='uppercase'>
               <Link href='/#home'>
-                <li onClick={() => setNav(false)} className='py-4 text-sm'>
+                <motion.li variants={item} onClick={() => setNav(false)} className='py-4 text-sm'>
                   Home
-                </li>
+                </motion.li>
               </Link>
               <Link href='/#about'>
-                <li onClick={() => setNav(false)} className='py-4 text-sm'>
+                <motion.li variants={item} onClick={() => setNav(false)} className='py-4 text-sm'>
                   About
-                </li>
+                </motion.li>
               </Link>
               <Link href='/#chess'>
-                <li onClick={() => setNav(false)} className='py-4 text-sm'>
+                <motion.li variants={item} onClick={() => setNav(false)} className='py-4 text-sm'>
                   Chess
-                </li>
+                </motion.li>
               </Link>
               <Link href='/#skills'>
-                <li onClick={() => setNav(false)} className='py-4 text-sm'>
+                <motion.li variants={item} onClick={() => setNav(false)} className='py-4 text-sm'>
                   Skills
-                </li>
+                </motion.li>
               </Link>
               <Link href='/#contact'>
-                <li onClick={() => setNav(false)} className='py-4 text-sm'>
+                <motion.li variants={item} onClick={() => setNav(false)} className='py-4 text-sm'>
                   Contact
-                </li>
+                </motion.li>
               </Link>
             </ul>
             <div className='p-10'>
-              <p className='uppercase tracking-widest text-[#5651e5] text-center'>
+              <motion.p variants={item} className='uppercase tracking-widest text-[#5651e5] text-center'>
                 Let&#39;s Connect
-              </p>
+              </motion.p>
               <div className='flex items-center justify-evenly my-4 w-full sm:w-[80%]'>
-                  <div className='rounded-full shadow-lg shadow-gray-950 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
+                  <motion.div variants={item} className='rounded-full shadow-lg shadow-gray-950 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
                     <Link href={'https://discord.gg/uquRPXkcnU'} target={"_blank"}><FaDiscord size={25} /></Link>
-                  </div>
-                  <div className='rounded-full shadow-lg shadow-gray-950 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
+                  </motion.div>
+                  <motion.div variants={item} className='rounded-full shadow-lg shadow-gray-950 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
                     <Link href='https://github.com/PhoenixLegen' target={"_blank"}>
                         <FaGithub size={25} />
                     </Link>
-                  </div>
-                  <div className='rounded-full shadow-lg shadow-gray-950 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
+                  </motion.div>
+                  <motion.div variants={item} className='rounded-full shadow-lg shadow-gray-950 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
                     <Link href='https://www.linkedin.com/in/legends-legend/' target={"_blank"}>
                       <FaChess size={25} />
                     </Link>
-                  </div>
+                  </motion.div>
                 </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
