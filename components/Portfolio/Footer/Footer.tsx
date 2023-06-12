@@ -1,3 +1,5 @@
+'use client';
+
 import { useAnimation } from 'framer-motion';
 import Link from 'next/link'
 import React, { useEffect, useRef } from 'react'

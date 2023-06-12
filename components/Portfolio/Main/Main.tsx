@@ -3,7 +3,7 @@ import { motion, useAnimation } from 'framer-motion';
 import { useEffect, useRef } from 'react';
 import Link from 'next/link'
 import React, {FC} from 'react'
-import {FaGithub, FaDiscord} from 'react-icons/fa'
+import {FaGithub, FaDiscord, FaChess} from 'react-icons/fa'
 import { container, item } from '@/components/Fade/variants';
 
 const Main:FC = () =>{
@@ -50,6 +50,11 @@ const Main:FC = () =>{
                     <motion.div variants={item} className='rounded-full shadow-lg shadow-gray-950 p-3 ease-in cursor-pointer hover:scale-110 duration-300'>
                         <Link href={'https://discord.gg/uquRPXkcnU'} target={"_blank"}>
                             <FaDiscord size={35} />
+                        </Link>
+                    </motion.div>
+                    <motion.div variants={item} className='rounded-full shadow-lg shadow-gray-950 p-3 ease-in cursor-pointer hover:scale-110 duration-300'>
+                        <Link href={'https://www.chess.com/member/sudhir-phoenix'} target={"_blank"}>
+                            <FaChess size={35} />
                         </Link>
                     </motion.div>
                 </div>

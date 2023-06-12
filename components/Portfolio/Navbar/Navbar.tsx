@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, {useState, useEffect, FC, useRef} from 'react';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
-import { FaDiscord, FaGithub} from 'react-icons/fa';
+import { FaChess, FaDiscord, FaGithub} from 'react-icons/fa';
 
 // import { useRouter } from 'next/router';
 import NavLogo from './navLogo.png'
@@ -179,7 +179,12 @@ const Navbar:FC = () => {
                         <FaGithub size={25} />
                     </Link>
                   </div>
-              </div>
+                  <div className='rounded-full shadow-lg shadow-gray-950 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
+                    <Link href='https://www.linkedin.com/in/legends-legend/' target={"_blank"}>
+                      <FaChess size={25} />
+                    </Link>
+                  </div>
+                </div>
             </div>
           </div>
         </div>
