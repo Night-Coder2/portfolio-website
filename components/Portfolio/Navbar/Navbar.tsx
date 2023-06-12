@@ -85,6 +85,9 @@ const Navbar:FC = () => {
               <Link href='/#about'>About</Link>
             </motion.li>
             <motion.li variants={item} className='ml-10 text-sm uppercase hover:border-b'>
+              <Link href='/#chess'>Chess</Link>
+            </motion.li>
+            <motion.li variants={item} className='ml-10 text-sm uppercase hover:border-b'>
               <Link href='/#skills'>Skills</Link>
             </motion.li>
             <motion.li variants={item} className='ml-10 text-sm uppercase hover:border-b'>
@@ -153,6 +156,11 @@ const Navbar:FC = () => {
               <Link href='/#about'>
                 <li onClick={() => setNav(false)} className='py-4 text-sm'>
                   About
+                </li>
+              </Link>
+              <Link href='/#chess'>
+                <li onClick={() => setNav(false)} className='py-4 text-sm'>
+                  Chess
                 </li>
               </Link>
               <Link href='/#skills'>
