@@ -14,13 +14,23 @@ import { container, item } from '@/components/Fade/variants';
 const Navbar:FC = () => {
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
+  const controls = useAnimation();
+  const ref = useRef(null);
 
   const handleNav = () => {
     setNav(!nav);
   };
 
-  const controls = useAnimation();
-  const ref = useRef(null);
+  useEffect(() => {
+    const handleShadow = () => {
+      if (window.scrollY >= 90) {
+        setShadow(true);
+      } else {
+        setShadow(false);
+      }
+    };
+    window.addEventListener('scroll', handleShadow);
+  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
@@ -43,17 +53,6 @@ const Navbar:FC = () => {
       }
     };
   }, [controls]);
-
-  useEffect(() => {
-    const handleShadow = () => {
-      if (window.scrollY >= 90) {
-        setShadow(true);
-      } else {
-        setShadow(false);
-      }
-    };
-    window.addEventListener('scroll', handleShadow);
-  }, []);
 
   return (
     <div
