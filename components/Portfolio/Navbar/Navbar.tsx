@@ -116,7 +116,7 @@ const Navbar:FC = () => {
         <motion.div variants={container} initial="hidden" animate={controls} ref={ref}
           className={
             nav
-              ? ' fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-gray-900 p-5 ease-in duration-500'
+              ? 'fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-gray-900 p-5 ease-in duration-500'
               : 'fixed left-[-100%] top-0 p-5 ease-in duration-500'
           }
         >
