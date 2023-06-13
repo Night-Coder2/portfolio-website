@@ -14,9 +14,9 @@ const Main:FC = () =>{
     useEffect(() => {
         const observer = new IntersectionObserver(([entry]) => {
                 if (entry.isIntersecting) {
-                controls.start('visible');
+                    controls.start('visible');
                 } else {
-                controls.start('hidden');
+                    controls.start('hidden');
                 }
             },
             { threshold: 0.1 } // Adjust the threshold as needed
