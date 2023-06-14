@@ -1,7 +1,7 @@
 'use client'
 
 import React, {FC} from 'react'
-import AbtImg from './chess.png'
+import chessIMG from './chess.png'
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion, useAnimation } from 'framer-motion';
@@ -61,12 +61,14 @@ const Chess:FC = () => {
             <div className='col-span-2'>
                 <motion.h2 variants={item} className='uppercase tracking-widest'>CHESS</motion.h2>
                 <motion.p variants={item} className='py-2'>
-                    I always had a different taste for chess. My intrest in Chess was sparked when I had a contest in 2022 in which I lost very bad. So I joined chess classes. Chess classes helped me a lot with chess then I left it so I used to watch youtube to learn it.
+                    I always had a different taste for chess. My intrest in Chess was sparked when I had a contest in 2022 in which I lost very bad. So I joined chess classes. Chess classes helped me a lot with chess then I left it so now I watch youtube to learn it.
                 </motion.p>
-                <motion.p variants={item} className='py-2 underline text-xl'><Link href='https://www.chess.com/member/sudhir-phoenix' target={"_blank"} >My Chess.com profile</Link></motion.p>
+                <motion.p variants={item} className='py-2 underline text-xl'>
+                    <Link href='https://www.chess.com/member/sudhir-phoenix' target={"_blank"} >My Chess.com profile</Link>
+                </motion.p>
             </div>
             <div className='w-full md:flex h-auto m-auto shadow-xl shadow-gray-950 rounded-xl items-center justify-center p-4 hover:scale-105 ease-in duration-300'>
-                <Image src={AbtImg} alt="/" className='rounded-xl' sizes='10'/>
+                <Image src={chessIMG} alt="/" className='rounded-xl' sizes='10'/>
             </div>
         </motion.div>
     </div>
