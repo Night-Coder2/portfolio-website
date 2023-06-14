@@ -37,7 +37,6 @@ const Main:FC = () =>{
     <div id='home' className='w-full h-screen text-center'>
         <div className='max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center'>
             <motion.div ref={ref} variants={container} initial={"hidden"} animate={controls}>
-                <motion.p variants={item} className='uppercase text-sm tracking-widest text-white/80'>LETS BUILD SOMETHING TOGETHER.</motion.p>
                 <motion.h1 variants={item} className='text-white/100'>Hi, I am <span className=' text-green-700'>Sudhir</span>.</motion.h1>
                 <motion.h1 variants={item} className='py-2 text-white/100'>A Student Who Likes Coding.</motion.h1>
                 <motion.p variants={item} className='py-4 text-white/80 max-w-[70%] m-auto'>I am a student who likes to code and build things. I am currently learning web development and I am also interested in embedded coding.</motion.p>

@@ -142,11 +142,11 @@ const Navbar:FC = () => {
                 <AiOutlineClose size={25} />
               </motion.div>
             </div>
-            <div className='border-b border-gray-950 my-4'>
+            {/* <div className='border-b border-gray-950 my-4'>
               <motion.p variants={item} className='w-[85%] md:w-[90%] py-4'>
                 Let&#39;s build something legendary together.
               </motion.p>
-            </div>
+            </div> */}
           </div>
           <div className='py-4 flex flex-col'>
             <ul className='uppercase'>
