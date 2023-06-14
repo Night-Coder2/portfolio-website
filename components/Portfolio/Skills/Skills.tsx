@@ -41,8 +41,7 @@ const Skills:FC = () => {
     }, [controls]);
 
   return (
-    <div id='skills' className='w-full lg:h-screen p-2'>
-        
+    <div id='skills' className='w-full lg:h-screen py-16'>
         <div className='max-w-[1240px] mx-auto flex flex-col justify-center h-full'>
         <motion.div ref={ref} variants={container} initial={"hidden"} animate={controls}>
             <motion.p variants={item} className='text-xl tracking-widest uppercase text-white/80'>Skills</motion.p>

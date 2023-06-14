@@ -63,7 +63,7 @@ export default function Contact() {
             })
     }
   return (
-    <div id='contact' className='max-w-[1240px] m-auto px-2 py-16 w-full'>
+    <div id='contact' className='max-w-[1240px] m-auto px-2 py-16 w-full lg:h-screen'>
         <motion.div ref={ref} variants={container} initial={"hidden"} animate={controls}>
             <motion.p variants={item} className='text-xl tracking-widest uppercase text-white'>Contact</motion.p>
             <motion.h2 variants={item} className='py-4'>Get In Touch</motion.h2>

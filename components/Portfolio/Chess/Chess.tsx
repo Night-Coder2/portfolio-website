@@ -56,7 +56,7 @@ const Chess:FC = () => {
   }, [controls]);
 
   return (
-    <div id='chess' className='w-full h-full p-2 flex items-center py-16'>
+    <div id='chess' className='w-full lg:h-screen p-2 flex items-center py-16'>
         <motion.div ref={ref} variants={container} initial={"hidden"} animate={controls} className='max-w-[1240px] m-auto lg:grid grid-cols-3 gap-8'>
             <div className='col-span-2'>
                 <motion.h2 variants={item} className='uppercase tracking-widest'>CHESS</motion.h2>
