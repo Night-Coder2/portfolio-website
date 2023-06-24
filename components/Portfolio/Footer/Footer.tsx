@@ -43,9 +43,9 @@ const Footer = () => {
         obs = observer
     }, [controls]);
     return (
-    <div style={{backgroundColor: 'transparent'}} className='fixed w-full h-[7rem] shadow-xl z-[100] bottom-0 ease-in-out duration-300 bg-gray-900'>
-        <motion.div ref={ref} variants={variants} initial="hidden" animate={controls} transition={{duration:0.2}} className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
-            <Link href={'/#home'} className='absolute right-5'><BsFillArrowUpCircleFill size={40}/></Link>
+    <div style={{backgroundColor: 'transparent'}} className='fixed right-1 h-[7rem] shadow-xl z-[100] bottom-0 ease-in-out duration-300 bg-gray-900'>
+        <motion.div ref={ref} variants={variants} initial="hidden" animate={controls} transition={{duration:0.2}} className="flex justify-between items-center w-full h-full">
+            <Link href={'/#home'} className='absolute right-3'><BsFillArrowUpCircleFill size={40}/></Link>
         </motion.div>
     </div>
   )
