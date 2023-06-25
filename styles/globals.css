@@ -4,6 +4,22 @@
 @tailwind components;
 @tailwind utilities;
 
+.backdrop {
+  @apply fixed left-0 top-0 h-full w-full flex items-center justify-center;
+  background: #000000e1;
+}
+
+.modal {
+  @apply bg-gray-900 rounded-xl flex flex-col justify-evenly m-auto text-center z-50;
+  width: clamp(40%, 100px, 20%);
+  height: min(50%, 200px);
+
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 html {
 scroll-behavior: smooth !important;
 }
@@ -45,6 +61,6 @@ scroll-behavior: smooth !important;
   }
 
   button {
-    @apply shadow-xl shadow-gray-950 uppercase text-white
+    @apply shadow-gray-950 uppercase text-white
   }
 }

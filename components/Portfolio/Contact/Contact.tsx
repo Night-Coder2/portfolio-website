@@ -3,13 +3,20 @@ import React, {useRef, useEffect} from 'react'
 import ContactImg from './contact.jpg';
 import Image from 'next/image'
 import Link from 'next/link'
-import {FaGithub, FaDiscord} from 'react-icons/fa'
-import {HiOutlineChevronDoubleUp} from 'react-icons/hi'
+import {FaGithub, FaDiscord, FaChess} from 'react-icons/fa'
 import emailjs from '@emailjs/browser';
-import { motion, useAnimation } from 'framer-motion';
+import { AnimatePresence, motion, useAnimation } from 'framer-motion';
 import { container, item } from '@/components/Fade/variants';
+import Modal from '@/components/utilities/Modal/modal';
 export default function Contact() {
-
+    const [modalOpen, setModalOpen] = React.useState(false);
+    const [text, setText] = React.useState('');
+    const close = () => {
+        setModalOpen(false);
+    }
+    const open = () => {
+        setModalOpen(true);
+    }
     const controls = useAnimation();
     const ref = useRef(null);
 
@@ -39,6 +46,7 @@ export default function Contact() {
     const EmailRef: any = useRef()
     const MessageRef: any = useRef()
     const handleSubmit = (e: any) => {
+        console.log(modalOpen)
         e.preventDefault()
         const Name = NameRef.current.value
         const Email = EmailRef.current.value
@@ -46,7 +54,7 @@ export default function Contact() {
         console.log(Name, Email, Message)
 
         if(!Name || !Email || !Message) {
-            alert('Please fill the form')
+            setText('Please fill all the fields')
             return
         }
 
@@ -56,13 +64,13 @@ export default function Contact() {
             from_email: Email,
             to_email: 'sudhircks@gmail.com',
             message: Message }, 'ZNCgwJLMP2GXH8R8I').then((result) => {
-                alert('success')
+                setText('Message Sent Successfully')
                 NameRef.current.value = null;
                 EmailRef.current.value = null;
                 MessageRef.current.value = null;
             })
     }
-  return (
+  return (<>
     <div id='contact' className='max-w-[1240px] m-auto px-2 py-16 w-full lg:h-screen'>
         <motion.div ref={ref} variants={container} initial={"hidden"} animate={controls}>
             <motion.p variants={item} className='text-xl tracking-widest uppercase text-white'>Contact</motion.p>
@@ -90,6 +98,11 @@ export default function Contact() {
                                     <FaDiscord size={35} />
                                 </Link>
                             </div>
+                            <div>
+                                <Link href={'https://www.chess.com/member/sudhir-phoenix'} target={"_blank"}>
+                                    <FaChess size={35} />
+                                </Link>
+                            </div>
                         </div>
                     </div>
                 </motion.div>
@@ -102,20 +115,25 @@ export default function Contact() {
                                 <input ref={NameRef} type="text" className='bg-gray-700 text-white border-2 rounded-lg p-3 flex border-gray-950' />
                             </div>
                         </div>
-                            <div className='flex flex-col'>
-                                <label className='uppercase text-sm py-2'>Email</label>
-                                <input ref={EmailRef} type="email" className='bg-gray-700 text-white border-2 rounded-lg p-3 flex border-gray-950' />
-                            </div>
-                            <div className='flex flex-col'>
-                                <label className='uppercase text-sm py-2'>Message</label>
-                                <textarea ref={MessageRef} className='bg-gray-700 text-white border-2 rounded-lg p-3 border-gray-950' rows={8}></textarea>
-                            </div>
-                            <button type='submit' className='w-full text-white rounded-lg p-3 hover:scale-105 pt-4 duration-150'>Send message</button>
+                        <div className='flex flex-col'>
+                            <label className='uppercase text-sm py-2'>Email</label>
+                            <input ref={EmailRef} type="email" className='bg-gray-700 text-white border-2 rounded-lg p-3 flex border-gray-950' />
+                        </div>
+                        <div className='flex flex-col'>
+                            <label className='uppercase text-sm py-2'>Message</label>
+                            <textarea ref={MessageRef} className='bg-gray-700 text-white border-2 rounded-lg p-3 border-gray-950' rows={8}></textarea>
+                        </div>
+                        <motion.button whileHover={{ scale: 1.05 }} onClick={() => (modalOpen ? close() : open())} whileTap={{ scale: 0.95 }} type='submit' className='w-full text-white rounded-lg p-3 hover:scale-105 pt-4 duration-150 shadow-gray-950 shadow-2xl'>Send message</motion.button>
+                        
+
                     </form>
                 </motion.div>
             </div>
         </motion.div>
+        <AnimatePresence initial={false} mode='wait'  onExitComplete={() => null}>
+            {modalOpen && <Modal handleClose={close} text={text} />}
+        </AnimatePresence>
     </div>
-    )
+    </>)
 }
 
