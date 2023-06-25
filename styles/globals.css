@@ -10,9 +10,9 @@
 }
 
 .modal {
-  @apply bg-gray-900 rounded-xl flex flex-col justify-evenly m-auto text-center z-50;
-  width: clamp(40%, 100px, 20%);
-  height: min(50%, 200px);
+  @apply bg-gray-900 rounded-xl max-w-[1000px] h-auto w-auto flex flex-col justify-evenly m-auto text-center z-50;
+  min-width: clamp(30%, 100px, 20%);
+  min-height: min(50%, 200px); 
 
   margin: auto;
   display: flex;

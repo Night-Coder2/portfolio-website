@@ -70,7 +70,7 @@ export default function Contact() {
                 MessageRef.current.value = null;
             })
     }
-  return (<>
+  return (<div className='p-8'>
     <div id='contact' className='max-w-[1240px] m-auto px-2 py-16 w-full lg:h-screen'>
         <motion.div ref={ref} variants={container} initial={"hidden"} animate={controls}>
             <motion.p variants={item} className='text-xl tracking-widest uppercase text-white'>Contact</motion.p>
@@ -123,7 +123,7 @@ export default function Contact() {
                             <label className='uppercase text-sm py-2'>Message</label>
                             <textarea ref={MessageRef} className='bg-gray-700 text-white border-2 rounded-lg p-3 border-gray-950' rows={8}></textarea>
                         </div>
-                        <motion.button whileHover={{ scale: 1.05 }} onClick={() => (modalOpen ? close() : open())} whileTap={{ scale: 0.95 }} type='submit' className='w-full text-white rounded-lg p-3 hover:scale-105 pt-4 duration-150 shadow-gray-950 shadow-2xl'>Send message</motion.button>
+                        <motion.button whileHover={{ scale: 1.05 }} onClick={() => (modalOpen ? close() : open())} whileTap={{ scale: 0.95 }} type='submit' className='w-full text-white rounded-lg p-3 hover:scale-105 pt-4 duration-150 shadow-gray-950 bg-gradient-to-r from-gray-700 to-gray-800 shadow-2xl'>Send message</motion.button>
                         
 
                     </form>
@@ -131,9 +131,11 @@ export default function Contact() {
             </div>
         </motion.div>
         <AnimatePresence initial={false} mode='wait'  onExitComplete={() => null}>
-            {modalOpen && <Modal handleClose={close} text={text} />}
+            {modalOpen && <Modal handleClose={close} text={text}>
+                <p className='italic p-5'>click anywhere outside the box or the button to exit</p>    
+            </Modal>}
         </AnimatePresence>
     </div>
-    </>)
+    </div>)
 }
 
