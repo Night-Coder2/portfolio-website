@@ -10,7 +10,7 @@ import { container, item } from '@/components/Fade/variants';
 import Modal from '@/components/utilities/Modal/modal';
 export default function Contact() {
     const [modalOpen, setModalOpen] = React.useState(false);
-    const [text, setText] = React.useState('');
+    const [text, setText] = React.useState({text: '', subTextExists: false, subText: ''});
     const close = () => {
         setModalOpen(false);
     }
@@ -54,7 +54,7 @@ export default function Contact() {
         console.log(Name, Email, Message)
 
         if(!Name || !Email || !Message) {
-            setText('Please fill all the fields')
+            setText({text: 'Please fill all the fields', subTextExists: false, subText: ''})
             return
         }
 
@@ -64,7 +64,7 @@ export default function Contact() {
             from_email: Email,
             to_email: 'sudhircks@gmail.com',
             message: Message }, 'ZNCgwJLMP2GXH8R8I').then((result) => {
-                setText('Message Sent Successfully')
+                setText({text: 'Message Sent Successfully', subTextExists: true, subText: 'I will get back to you soon!'})
                 NameRef.current.value = null;
                 EmailRef.current.value = null;
                 MessageRef.current.value = null;
@@ -123,15 +123,16 @@ export default function Contact() {
                             <label className='uppercase text-sm py-2'>Message</label>
                             <textarea ref={MessageRef} className='bg-gray-700 text-white border-2 rounded-lg p-3 border-gray-950' rows={8}></textarea>
                         </div>
-                        <motion.button whileHover={{ scale: 1.05 }} onClick={() => (modalOpen ? close() : open())} whileTap={{ scale: 0.95 }} type='submit' className='w-full text-white rounded-lg p-3 hover:scale-105 pt-4 duration-150 shadow-gray-950 bg-gradient-to-r from-gray-700 to-gray-800 shadow-2xl'>Send message</motion.button>
+                        <motion.button whileHover={{ scale: 1.1 }} onClick={() => (modalOpen ? close() : open())} whileTap={{ scale: 0.9 }} type='submit' className='w-full text-white rounded-lg p-3 hover:scale-105 pt-4 duration-150 shadow-gray-950 bg-gradient-to-r from-gray-700 to-gray-800 shadow-2xl'>Send message</motion.button>
                         
 
                     </form>
                 </motion.div>
             </div>
         </motion.div>
-        <AnimatePresence initial={false} mode='wait'  onExitComplete={() => null}>
-            {modalOpen && <Modal handleClose={close} text={text}>
+        <AnimatePresence initial={false} mode='wait' onExitComplete={() => null}>
+            {modalOpen && <Modal handleClose={close} text={text.text}>
+                {text.subTextExists && <p className='italic p-5'>{text.subText}</p>  }
                 <p className='italic p-5'>click anywhere outside the box or the button to exit</p>    
             </Modal>}
         </AnimatePresence>
