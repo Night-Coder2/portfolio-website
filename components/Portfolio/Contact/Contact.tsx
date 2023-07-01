@@ -8,6 +8,7 @@ import emailjs from '@emailjs/browser';
 import { AnimatePresence, motion, useAnimation } from 'framer-motion';
 import { container, item } from '@/components/Fade/variants';
 import Modal from '@/components/utilities/Modal/modal';
+import { AiOutlineClose } from 'react-icons/ai';
 export default function Contact() {
     const [modalOpen, setModalOpen] = React.useState(false);
     const [text, setText] = React.useState({text: '', subTextExists: false, subText: ''});
@@ -131,9 +132,10 @@ export default function Contact() {
             </div>
         </motion.div>
         <AnimatePresence initial={false} mode='wait' onExitComplete={() => null}>
-            {modalOpen && <Modal handleClose={close} text={text.text}>
+            {modalOpen && <Modal handleClose={close}>
+                <p className='p-4'>{text.text}</p>
                 {text.subTextExists && <p className='italic p-5'>{text.subText}</p>  }
-                <p className='italic p-5'>click anywhere outside the box or the button to exit</p>    
+                <p className='italic p-5'>click anywhere to exit</p>
             </Modal>}
         </AnimatePresence>
     </div>
