@@ -190,7 +190,7 @@ const Navbar:FC = () => {
                     </Link>
                   </motion.div>
                   <motion.div variants={item} className='rounded-full shadow-lg shadow-gray-950 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-                    <Link href='https://www.linkedin.com/in/legends-legend/' target={"_blank"}>
+                    <Link href='https://www.chess.com/member/sudhir-phoenix' target={"_blank"}>
                       <FaChess size={25} />
                     </Link>
                   </motion.div>
