@@ -63,7 +63,7 @@ export default function Contact() {
             from_name: Name,
             to_name : 'sudhir',
             from_email: Email,
-            to_email: 'sudhircks@gmail.com',
+            to_email: 'maddysudhir28@gmail.com',
             message: Message }, 'ZNCgwJLMP2GXH8R8I').then((result) => {
                 setText({text: 'Message Sent Successfully', subTextExists: true, subText: 'I will get back to you soon!'})
                 NameRef.current.value = null;
